@@ -1,0 +1,238 @@
+@media (max-width: 1300px) {
+    .navbar .container .navbar-brand{
+    width: 70px;
+    }
+    .collapse {
+    background: #ada996;
+    background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+    background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+}
+.pop-up .box{
+    width: 290px;}
+    .pop-up[data-popup-name="shop"] .box{
+    width: 85%;
+}
+
+    header #EM-carousel .EM-item .part2 img:nth-of-type(1){
+    width: 70%;
+    top: -18%;
+    left: 10%;
+}
+    header #EM-carousel .EM-item .part2 img:nth-of-type(2){
+    top: 40%;
+    left: 50%;
+    width: 80%;
+    }
+    header #EM-carousel>button{
+      width: 35px;
+      height: 35px;
+      top: 95%;
+    }
+   header #EM-carousel button.prev{
+    right: 70px;
+}
+#Latest .product{
+    width: 300px;
+    margin: auto;
+}
+#Latest .product .part1 ul li{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+}
+#Latest .product p{
+    line-height: 17px;
+    font-size: 14px;
+} 
+.pop-up[data-popup-name="product"] .box{
+   width: 280px;
+   max-height: 95vh;
+}
+}
+
+@media (min-width: 371px) and (max-width: 1300px) {
+    .pop-up .box{
+    width: 410px;}
+    
+    header #EM-carousel>button{
+        top: 92%;
+    }
+    header #EM-carousel button.next{
+    right: 30px;
+    }
+    header #EM-carousel button.prev{
+    left: auto !important;
+    right: 75px;
+    }
+header #EM-carousel .EM-item .part2 img:nth-of-type(1){
+    position: relative;
+    width: 60%;
+    top: -20%;
+    left: 10%;
+}
+header #EM-carousel .EM-item .part2 img:nth-of-type(2){
+    top: 30%;
+    left: 50%;
+    width: 75%;
+}
+#Latest .product{
+    width: 320px;
+    margin: auto;
+}
+.pop-up[data-popup-name="product"] .box{
+   width: 320px;
+}
+.pop-up[data-popup-name="shop"]{
+   overflow-y: auto;
+}
+.pop-up[data-popup-name="shop"] .box .item{
+    width: 230px;
+    margin: auto;
+}
+}
+
+@media (min-width: 577px) and (max-width: 1300px) {
+     header #EM-carousel>button{
+      width: 37px;
+      height: 37px;
+    }
+    header #EM-carousel .EM-item .part2 img:nth-of-type(1){
+    width: 60%;
+    top: -20%;
+    left: 10%;
+    }
+    header #EM-carousel .EM-item .part2 img:nth-of-type(2){
+    top: 30%;
+    left: 50%;
+    width: 60%;
+   }
+   #Latest .product{
+    width: 500px;
+    margin: auto;
+}
+#Latest .product .part1 ul li{
+    width: 75px;
+    height: 75px;
+}
+#Latest .product p{
+    line-height: initial !important;
+    font-size: initial !important;
+} 
+#Featured .product .item{
+    width: 220px;
+    margin: auto;
+}
+.pop-up[data-popup-name="product"] .box{
+   width: 420px;
+}
+}
+
+@media (min-width: 769px) and (max-width: 1300px) {
+       .pop-up[data-popup-name="shop"] .box{
+    width: 75%;
+   }
+        header #EM-carousel>button{
+      width: 45px;
+      height: 45px;
+        }
+    header #EM-carousel button.prev {
+       right: 85px;
+        }
+   header #EM-carousel button.prev i ,
+   header #EM-carousel button.next i{
+    font-size: 20px;
+   }
+    header #EM-carousel .EM-item .part1 h1{
+       font-size: x-large;
+    }
+    header #EM-carousel .EM-item .part2 img:nth-of-type(2){
+    left: 50%;
+    width: 95%;
+    }
+   header #EM-carousel .EM-item .part2 img:nth-of-type(1){
+    position: relative;
+    width: 75%;
+}
+   header #EM-carousel .EM-item .part2 img:nth-of-type(2){
+    top: 45%;
+    left: 50%;
+    width: 100%;
+}
+.pop-up[data-popup-name="product"] .box{
+   width: 520px;
+}
+.pop-up[data-popup-name="shop"]{
+   overflow-y: auto;
+}
+.pop-up[data-popup-name="shop"] .box .item{
+    width: 220px;
+    margin: auto;
+}
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+    .navbar .container .navbar-brand{
+    width: 90px;
+    }
+    .collapse{
+        background: transparent;
+    }
+    header #EM-carousel .EM-item .part1 h1{
+       font-size: 38px;
+    }
+    header #EM-carousel .EM-item .part2 img:nth-of-type(1){
+    top: -15%;
+}
+    header #EM-carousel .EM-item .part2 img:nth-of-type(2){
+    width: 95%;
+}
+#Latest .product{
+    width: initial !important;
+    margin: auto;
+}
+#Latest .product .part1 ul li{
+    width: 75px;
+    height: 75px;
+}
+#Latest .product p{
+    line-height: initial !important;
+    font-size: initial !important;
+} 
+.pop-up[data-popup-name="product"] .box{
+   width: 680px;
+     margin-block: initial !important;
+}
+.pop-up[data-popup-name="shop"]{
+   overflow-y: auto;
+}
+
+}
+
+@media (min-width: 1181px) and (max-width: 1300px) {
+    .pop-up[data-popup-name="shop"] .box{
+    width: 60%;
+   }
+    header #EM-carousel .EM-item .part2 img:nth-of-type(1){
+    position: relative;
+    width: 70%;
+    top: -10%;
+}
+   header #EM-carousel .EM-item .part2 img:nth-of-type(2){
+    top: 50%;
+    left: 50%;
+    width: 95%;
+}
+#Featured .product .item{
+    width: 220px;
+    margin: auto;
+}
+}
+@media (min-width: 1200px) and (max-width: 1300px) {
+    #Featured .product .item{
+    width: 260px;
+    margin: auto;
+}
+.pop-up[data-popup-name="shop"]{
+   overflow-y: auto !important;
+}
+}
