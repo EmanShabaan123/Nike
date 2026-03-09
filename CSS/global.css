@@ -89,7 +89,7 @@ nav.navbar.scrolled{
     pointer-events: none;
 }
 #LoadingPage.hide{
-    opacity: 0;
+    display: none;
 }
 ::-webkit-scrollbar{
     width: 12px;
@@ -98,7 +98,7 @@ body::-webkit-scrollbar-track{
   background-color: #000;
 }
 body::-webkit-scrollbar-thumb{
-    background-color: #000; 
+    background-color: #000;
     border-radius: 10px;
 }
 body.show::-webkit-scrollbar-track{
@@ -161,8 +161,9 @@ body.show::-webkit-scrollbar-thumb{
 .pop-up[data-popup-name="shop"] .box .notification{    
     margin: 0;
     border-radius: 7px;
-    background-color: bisque;
+    background-color: #FFF3CD;
     padding-block: 12px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 .value li{
     width: 25px;
@@ -190,6 +191,15 @@ body.show::-webkit-scrollbar-thumb{
     width: 200px;
     margin: auto;
 }
+.pop-up[data-popup-name="shop"]::-webkit-scrollbar{
+    width: 10px;
+    background: #ada996;
+    background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+    background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+}
+.pop-up[data-popup-name="shop"]::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+}
 .pop-up[data-popup-name="product"] .box{
    width: 650px;
    max-height: 100vh;
@@ -203,4 +213,7 @@ body.show::-webkit-scrollbar-thumb{
 }
 .color .value ul li.active{
     box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+.hidden{
+    display: none !important;
 }

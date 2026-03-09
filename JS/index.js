@@ -22,6 +22,8 @@ if (localStorage.getItem("ProductCarts") == null){
     UpdateLocalStorage();
 }else{
     ProductCarts = JSON.parse(localStorage.getItem("ProductCarts"))
+    UpdateLocalStorage();
+    DisplayCart();
 }
 // ///////////////////////////////////////
 NextButton.addEventListener("click",function(){
@@ -46,6 +48,7 @@ PrevButton.addEventListener("click",function(){
 // //////////////////////////////////////////////
 window.addEventListener("DOMContentLoaded",function(){
     CarouselSliders[0].classList.add("active")
+    CheckProducts();
 })
 // /////////////////////////////
 
@@ -126,7 +129,29 @@ NavLinks.forEach(function(NavLink){
     })
     })
 })
-
+////////////////////////////////////
+window.addEventListener("scroll",function(){
+    let Sections = document.querySelectorAll("section");
+        Sections.forEach(section =>{
+            let top = window.scrollY ,
+                offset = section.offsetTop - NavHeight ,
+                Height = section.offsetHeight ,
+                ID = section.getAttribute("id");
+            if(top >= offset && top <= offset+Height){
+                NavLinks.forEach(Link => {
+                    Link.classList.remove("active");
+    
+    let Active = document.querySelector('.nav-link[href*='+ ID + ']');
+    if(Active){
+       Active.classList.add("active")
+    }
+                    
+                })
+            }
+        })
+        
+})
+//////////////////////////////////
 // ///////////////////////////////////
 PopupBoxes.forEach(function(PopupBox){
     PopupBox.addEventListener("click",function(e){
@@ -220,3 +245,62 @@ features.forEach(function(product){
     `;
 })
 // /////////////////////////////////////
+
+function DisplayCart(){
+
+let PopUpRow = document.querySelector('.pop-up[data-popup-name="shop"] .row');
+
+PopUpRow.innerHTML = "";
+
+ProductCarts.forEach(function(ProductCart){
+
+let productData = GetProduct(ProductCart.id);
+
+PopUpRow.innerHTML +=  
+` <div class="col-sm-6   col-lg-4">
+                       <div class="item mb-4 py-3 px-3 rounded-3 ">
+                        <img src="./images/products/${productData.images[0]}" alt=""class="mb-2 mx-auto" >
+                        <h5>${productData.name.slice(0,15)}...</h5>
+
+                         <div class="d-flex fw-bold">
+                           <div class="label me-2 ">
+                                <h6>Price :</h6>
+                          </div>
+                          <div class="value">
+                               ${showprice(productData.price , productData.discount)}
+                           </div>
+                         </div>
+
+                         <div class="d-flex fw-bold">
+                           <div class="label me-2 ">
+                                <h6>Size :</h6>
+                           </div>
+                           <div class="value">
+                                <ul class="list-unstyled d-flex">
+                                     ${ShowSizes([ProductCart.size])}
+                                </ul>
+                           </div>
+                         </div>
+
+
+                        <div class="d-flex fw-bold color">
+                           <div class="label me-2 ">
+                                <h6>Colors :</h6>
+                           </div>
+                          <div class="value">
+                               <ul class="list-unstyled d-flex">
+                                    ${ShowListColors([ProductCart.color])}
+                               </ul>
+                          </div>
+                         </div>
+                        
+                        ${RemoveButton(productData.id)}
+                      
+                        </div>
+                    </div>
+    `;
+
+});
+
+}
+//////////////////////////////////////

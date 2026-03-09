@@ -61,7 +61,7 @@ var features = [
     },
     {
         'id': 6,
-        'name': "Wave MIZUNO Lightning",
+        'name': "Wave Lightning",
         'images': ['6-1.png', '6-2.png', '6-3.png', '6-4.png'],
         'sizes': ['M', 'L'],
         'colors': ['#0373B9', '#E72835', '#fff', '#32487B'],

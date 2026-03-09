@@ -236,18 +236,22 @@ function AddToCart(that , ProductId){
             size : ProductEle.getAttribute('data-selected-size'),
         }
     ProductCarts.push(NewOrder);
-    UpdateLocalStorage()
+    UpdateLocalStorage();
     ToggleCartBtn(that , 'remove');
     that.setAttribute('onclick', `RemoveFromCart(this , ${product.id})`);
+    DisplayCart();
+     CheckProducts();
 }
 ///////////////////////////////////////
 function RemoveFromCart(that , ProductId){
     ProductCarts = ProductCarts.filter((product) => product.id != ProductId);
-    UpdateLocalStorage()
+   
+    UpdateLocalStorage();
     ToggleCartBtn(that , 'add');
 
-     that.setAttribute('onclick', `AddToCart(this , ${ProductId})`);
-    
+    that.setAttribute('onclick', `AddToCart(this , ${ProductId})`);
+    DisplayCart();
+    CheckProducts();
 }
 // ///////////////////////////////////
 function ToggleCartBtn(btn , status){
@@ -282,5 +286,31 @@ function PrepareBtn(ProductIntoCart , ProductId){
                
     }else{
         return   `<button class="btn mainbutton  " onclick="RemoveFromCart(this ,${ProductId})"  >Remove From Cart</button>`
+    }
+}
+// ////////////////////////////////////
+function RemoveFromPop(ProductId){
+    ProductCarts = ProductCarts.filter((product) => product.id != ProductId);
+   
+    UpdateLocalStorage() ; 
+    DisplayCart();
+     CheckProducts();
+}
+// ////////////////////////////////////
+function RemoveButton(ProductId){
+   return   `<button class="btn mainbutton  w-100" onclick="RemoveFromPop(${ProductId})"  >Remove</button>`
+}
+// /////////////////////////////////
+function CheckProducts(){
+     let Notification = document.querySelector('.pop-up[data-popup-name="shop"] .notification'),
+         Buy = document.querySelector('.pop-up[data-popup-name="shop"] .buy ');
+
+    if(ProductCarts.length == 0){
+        Notification.classList.remove("hidden")
+        Buy.classList.add("hidden")
+    }
+    else{
+        Notification.classList.add("hidden")
+        Buy.classList.remove("hidden") 
     }
 }

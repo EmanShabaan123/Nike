@@ -14,14 +14,14 @@
 }
 
     header #EM-carousel .EM-item .part2 img:nth-of-type(1){
-    width: 70%;
-    top: -18%;
+    width: 75%;
+    top: -30%;
     left: 10%;
 }
     header #EM-carousel .EM-item .part2 img:nth-of-type(2){
-    top: 40%;
+    top: 30%;
     left: 50%;
-    width: 80%;
+    width: 90%;
     }
     header #EM-carousel>button{
       width: 35px;
@@ -48,6 +48,15 @@
    width: 280px;
    max-height: 95vh;
 }
+.pop-up[data-popup-name="shop"]::-webkit-scrollbar{
+   width: 0px;
+   background-color: transparent;
+}
+.pop-up[data-popup-name="shop"]::-webkit-scrollbar-thumb{
+   border-radius: 0px;
+   background-color: transparent;
+}
+
 }
 
 @media (min-width: 371px) and (max-width: 1300px) {
@@ -234,5 +243,13 @@ header #EM-carousel .EM-item .part2 img:nth-of-type(2){
 }
 .pop-up[data-popup-name="shop"]{
    overflow-y: auto !important;
+}
+.pop-up[data-popup-name="shop"]::-webkit-scrollbar{
+    width: 10px;
+    background-color: #ada996;
+}
+.pop-up[data-popup-name="shop"]::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: gray;
 }
 }
