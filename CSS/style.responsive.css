@@ -19,17 +19,17 @@
     left: 10%;
 }
     header #EM-carousel .EM-item .part2 img:nth-of-type(2){
-    top: 30%;
+    top: 25%;
     left: 50%;
-    width: 90%;
+    width: 95%;
     }
     header #EM-carousel>button{
-      width: 35px;
-      height: 35px;
-      top: 95%;
+      width: 40px;
+      height: 40px;
+      top: 92%;
     }
    header #EM-carousel button.prev{
-    right: 70px;
+    right: 80px;
 }
 #Latest .product{
     width: 300px;
@@ -102,8 +102,8 @@ header #EM-carousel .EM-item .part2 img:nth-of-type(2){
 
 @media (min-width: 577px) and (max-width: 1300px) {
      header #EM-carousel>button{
-      width: 37px;
-      height: 37px;
+      width: 40px;
+      height: 40px;
     }
     header #EM-carousel .EM-item .part2 img:nth-of-type(1){
     width: 60%;
